@@ -1,6 +1,5 @@
 package br.com.dio.desafio.dominio;
 
-import java.sql.SQLOutput;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,8 +25,8 @@ public class Dev {
         }
     }
 
-    public double calcularXp() {
-      return this.conteudosInscritos.stream().mapToDouble(Conteudo::calcularXP).sum();
+    public double calcularTotalXp() {
+        return this.conteudosConcluidos.stream().mapToDouble(Conteudo::calcularXP).sum();
     }
 
     /**********************************************************************************************************************/
